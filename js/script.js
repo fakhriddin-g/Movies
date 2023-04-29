@@ -26,15 +26,16 @@ const movieDB = {
 
 // #1
 const promoAdv = document.querySelector('.promo__adv')
-promoAdv.style.display = 'none'
-// const promoImg = document.querySelectorAll('img')
-// const promoTitle = document.querySelector('.promo__adv-title')
+// promoAdv.style.display = 'none'
+const promoImg = document.querySelectorAll('img')
+const promoTitle = document.querySelector('.promo__adv-title')
 
-// promoImg.forEach(item => {
-//     if(promoAdv.innerHTML.includes('img')) {
-//         promoAdv.romove('div')
-//     }
-// })
+promoImg.forEach(item => {
+    if(promoAdv.innerHTML.includes('img')) {
+        item.remove()
+        promoTitle.remove()
+    }
+})
 
 // promoAdv.style.display = 'none'
 // promoImg.forEach(item => {
