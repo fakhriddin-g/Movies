@@ -24,3 +24,49 @@ const movieDB = {
     ]
 };
 
+// #1
+const promoAdv = document.querySelector('.promo__adv')
+promoAdv.style.display = 'none'
+// const promoImg = document.querySelectorAll('img')
+// const promoTitle = document.querySelector('.promo__adv-title')
+
+// promoImg.forEach(item => {
+//     if(promoAdv.innerHTML.includes('img')) {
+//         promoAdv.romove('div')
+//     }
+// })
+
+// promoAdv.style.display = 'none'
+// promoImg.forEach(item => {
+//     if(!item) {
+//         promoAdv.firstElementChild.remove('div') 
+//     }
+// })
+
+// #2 #3
+const promoContent = document.querySelector('.promo__content .promo__genre')
+const promoBg = document.querySelector('.promo__content .promo__bg')
+promoContent.innerHTML = "драма"
+promoBg.style.background = "url(./img/bg.jpg)"
+promoBg.style.backgroundSize = "cover"
+
+// #4
+
+// #5
+const tabs = document.querySelectorAll('.promo__menu-item')
+tabs.forEach(item => {
+    item.onclick = () => {
+        tabs.forEach(item => item.classList.remove('promo__menu-item_active'))
+        item.classList.add('promo__menu-item_active')
+    }
+})
+
+// #6
+const deleteFilms = document.querySelectorAll('.delete')
+
+deleteFilms.forEach(item => {
+    item.onclick = () => {
+        // item.parentElement.style.display = "none"
+        item.parentElement.remove('li')
+    }
+})
