@@ -37,13 +37,6 @@ promoImg.forEach(item => {
     }
 })
 
-// promoAdv.style.display = 'none'
-// promoImg.forEach(item => {
-//     if(!item) {
-//         promoAdv.firstElementChild.remove('div') 
-//     }
-// })
-
 // #2 #3
 const promoContent = document.querySelector('.promo__content .promo__genre')
 const promoBg = document.querySelector('.promo__content .promo__bg')
@@ -69,5 +62,15 @@ deleteFilms.forEach(item => {
     item.onclick = () => {
         // item.parentElement.style.display = "none"
         item.parentElement.remove('li')
+    }
+})
+
+// #7
+const seenFilm = document.querySelectorAll('.promo__interactive-item')
+const filmTitle = document.querySelector('.promo__title')
+seenFilm.forEach(film => {
+    film.style.cursor = 'pointer'
+    film.onclick = () => {
+        filmTitle.innerHTML = film.innerHTML
     }
 })
